@@ -1,0 +1,192 @@
+{
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "pens": [
+        {
+            "name": "my_compoent",
+            "text": "PIM",
+            "x": 19,
+            "y": 176,
+            "width": 140,
+            "height": 110,
+            "fromArrow": "triangleSolid",
+            "id": "4258716",
+            "lineWidth": 1,
+            "fontSize": 12,
+            "lineHeight": 1.5,
+            "anchors": [
+                {}
+            ],
+            "rotate": 0,
+            "children": [
+                "ac36ae6"
+            ]
+        },
+        {
+            "name": "my_compoent",
+            "text": "PIM",
+            "x": 362,
+            "y": 301,
+            "width": 140,
+            "height": 110,
+            "fromArrow": "triangleSolid",
+            "id": "d8a5aa8",
+            "lineWidth": 1,
+            "fontSize": 12,
+            "lineHeight": 1.5,
+            "anchors": [
+                {}
+            ],
+            "rotate": 0,
+            "children": [
+                "4c62a257"
+            ]
+        },
+        {
+            "name": "interface_part",
+            "text": "1",
+            "width": 0.06428571428571428,
+            "height": 0.13636363636363635,
+            "x": 1,
+            "y": 1,
+            "id": "ac36ae6",
+            "lineWidth": 1,
+            "fontSize": 12,
+            "lineHeight": 1.5,
+            "anchors": [
+                {
+                    "id": "0",
+                    "penId": "ac36ae6",
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            ],
+            "rotate": 0,
+            "parentId": "4258716",
+            "ex": 1.0642857142857143,
+            "ey": 1.1363636363636362,
+            "locked": 2,
+            "connectedLines": [
+                {
+                    "lineId": "4a1867d",
+                    "lineAnchor": "5e1621a7",
+                    "anchor": "0"
+                }
+            ]
+        },
+        {
+            "name": "interface_part",
+            "text": "1",
+            "width": 0.06428571428571428,
+            "height": 0.13636363636363635,
+            "x": 1,
+            "y": 1,
+            "id": "4c62a257",
+            "lineWidth": 1,
+            "fontSize": 12,
+            "lineHeight": 1.5,
+            "anchors": [
+                {
+                    "id": "0",
+                    "penId": "4c62a257",
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            ],
+            "rotate": 0,
+            "parentId": "d8a5aa8",
+            "ex": 1.0642857142857143,
+            "ey": 1.1363636363636362,
+            "locked": 2,
+            "connectedLines": [
+                {
+                    "lineId": "4a1867d",
+                    "lineAnchor": "565b997f",
+                    "anchor": "0"
+                },
+                {
+                    "lineId": "7bfd21c6",
+                    "lineAnchor": "60df72e",
+                    "anchor": "0"
+                }
+            ]
+        },
+        {
+            "id": "4a1867d",
+            "name": "line",
+            "lineName": "polyline",
+            "x": 163.5,
+            "y": 263.5,
+            "type": 1,
+            "lineWidth": 1,
+            "length": 528,
+            "ex": 506.5,
+            "ey": 418.5,
+            "width": 343,
+            "height": 155,
+            "fontSize": 12,
+            "lineHeight": 1.5,
+            "anchors": [
+                {
+                    "id": "565b997f",
+                    "x": 1,
+                    "y": 1,
+                    "penId": "4a1867d",
+                    "connectTo": "4c62a257",
+                    "anchorId": "0",
+                    "start": true,
+                    "lineLength": 30
+                },
+                {
+                    "x": 1,
+                    "y": 0.8064516129032258,
+                    "id": "1fbf1bfb",
+                    "lineLength": 125
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "id": "b504c1",
+                    "penId": "4a1867d",
+                    "lineLength": 343
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "id": "77be350d",
+                    "penId": "4a1867d",
+                    "isTemp": false,
+                    "lineLength": 30
+                },
+                {
+                    "x": 0,
+                    "y": 0.1935483870967742,
+                    "clientX": 810,
+                    "clientY": 380,
+                    "pageX": 810,
+                    "pageY": 380,
+                    "ctrlKey": false,
+                    "shiftKey": false,
+                    "altKey": false,
+                    "buttons": 1,
+                    "id": "5e1621a7",
+                    "penId": "4a1867d",
+                    "connectTo": "ac36ae6",
+                    "isTemp": false,
+                    "anchorId": "0"
+                }
+            ]
+        }
+    ],
+    "origin": {
+        "x": 0,
+        "y": 0
+    },
+    "center": {
+        "x": 0,
+        "y": 0
+    },
+    "paths": {},
+    "version": "1.0.2"
+}
