@@ -22,7 +22,7 @@ def cut_redundancy(pens_list):
             pass
     return pens_list
 
-def get_all_id():
+def get_all_id(pens_list):
     return [i['id'] for i in pens_list]
 
 def get_modules_with_interfaces(pens_list):
@@ -39,6 +39,7 @@ def get_modules_with_interfaces(pens_list):
                     modules[pen['id']].append(i)
         except:
             pass
+    return modules
 
 def get_lines_with_interfaces(pens_list):
     lines = {}
@@ -53,4 +54,5 @@ def get_lines_with_interfaces(pens_list):
                 lines[pen['id']].append(id)
             except:
                 pass
+    return lines
             
