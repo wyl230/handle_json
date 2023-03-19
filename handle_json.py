@@ -47,7 +47,7 @@ def get_lines_with_interfaces(pens_list):
     for pen in filter(lambda pen:pen['name'] == 'line', pens_list):
         # print(pen)
         lines[pen['id']] = []
-        print('该连线连接的两个接口的id')
+        # print('该连线连接的两个接口的id')
         for anchor in pen['anchors']:
             try:
                 id = anchor['connectTo']
