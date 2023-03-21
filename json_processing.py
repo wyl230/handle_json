@@ -25,7 +25,10 @@ class JSONProcessor:
     def get_all_id(self):
         return [i['id'] for i in self.pens_list]
 
-    def get_modules_with_interfaces(self):
+    def get_modules(self): # 返回原始的模型列表 (惰性)
+        return filter(lambda pen: 'children' in pen.keys(), self.pens_list)
+
+    def get_modules_with_interfaces(self): # 返回模型字典，值为其拥有的的接口列表
         modules = {}
         for pen in self.pens_list:
             try:
@@ -40,6 +43,9 @@ class JSONProcessor:
             except:
                 pass
         return modules
+
+    def get_lines(self): # 返回原始的连线(惰性)
+        return filter(lambda pen: pen['name'] == 'line', self.pens_list)
 
     def get_lines_with_interfaces(self):
         lines = {}

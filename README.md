@@ -1,4 +1,4 @@
-## 请暂时先调用handle_json.py
+## 请暂时先调用handle_json.py, 以后更换为json_processing.py
 
 ## json_processing.py 是类的形式，未测试。
 
