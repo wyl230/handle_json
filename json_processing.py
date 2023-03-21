@@ -64,3 +64,32 @@ class JSONProcessor:
 
     def get_pens_list(self):
         return self.pens_list
+
+    def get_modules_with_pos(self, module): # useless
+        x = module['x']
+        y = module['y']
+        width = module['width']
+        height = module['height']
+        return (x, y, width, height)
+
+    def find_contained_modules(self): # 返回组件之间的关系: 硬件包含的组件，根据位置计算
+        modules = self.get_modules()
+        # 初始化包含关系字典
+        contained_modules = {module['id']: [] for module in modules}
+
+        # 遍历每个矩形并找到包含它的矩形
+        for i, outer_rect in enumerate(modules):
+            for j, inner_rect in enumerate(modules):
+                # 不检查自身矩形
+                if i == j:
+                    continue
+
+                # 如果inner_rect被outer_rect包含，则将inner_rect添加到outer_rect的包含列表中
+                if (inner_rect['x'] >= outer_rect['x'] and
+                        inner_rect['y'] >= outer_rect['y'] and
+                        inner_rect['x'] + inner_rect['width'] <= outer_rect['x'] + outer_rect['width'] and
+                        inner_rect['y'] + inner_rect['height'] <= outer_rect['y'] + outer_rect['height']):
+                    contained_modules[outer_rect['id']].append(inner_rect['id'])
+
+        return contained_modules
+
