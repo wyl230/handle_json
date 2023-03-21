@@ -43,11 +43,9 @@ class JSONProcessor:
     def get_lines(self): # 返回原始的连线(惰性)
         return filter(lambda pen: pen['name'] == 'line', self.pens_list)
 
-    def get_lines_with_interfaces(self): # 返回连线（字典），值为其拥有的接口列表
+    def get_lines_with_interfaces(self): # 返回连线（字典），值为其拥有的接口列表(2个)
         lines = {}
-        # print('所有连线，给出了哪两个接口相连')
         for line in self.get_lines():
-            # another way
             anchors_with_id = filter(lambda anchor: 'connectTo' in anchor.keys(), line['anchors'])
             lines[line['id']] = [anchor['connectTo'] for anchor in anchors_with_id]
         return lines
